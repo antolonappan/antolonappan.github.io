@@ -40,6 +40,9 @@ hr.title {
   color: inherit !important;
 }
 
+a {
+  color: inherit !important;
+}
 .qoute p{
   text-align: center;
   font-size: 35px;
@@ -61,6 +64,6 @@ hr.title {
   font-size: 18px;
   font-family: Inconsolata;
   color: #5e5d5d;
-  margin-left: 40%;
-  margin-right: 40%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
