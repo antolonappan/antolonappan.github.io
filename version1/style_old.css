@@ -1,0 +1,69 @@
+.website-title {
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.website-title h1 {
+  margin: 0 !important;
+  font-size: 48px;
+  font-family: Babylonica;
+  font-weight: bold;
+  color: black;
+}
+
+hr.title {
+  height: 2px;
+  background: #5e5d5d;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.website-description {
+  text-align: center;
+  font-size: 18px;
+  font-family: Inconsolata;
+  color: #5e5d5d;
+  margin-top: 0px;
+  padding: 0px;
+}
+
+.website-description p {
+  margin: 0 !important;
+}
+
+.acicon {
+  margin-top: 15px;
+}
+
+.website-description a {
+  color: inherit !important;
+}
+
+a {
+  color: inherit !important;
+}
+.qoute p{
+  text-align: center;
+  font-size: 35px;
+  font-family: Zeyada;
+}
+
+
+
+.div1 {
+  margin-left: 40%; 
+}
+
+.div2 {
+  margin-right: 40%;
+}
+
+.about-me {
+  text-align: center;
+  font-size: 18px;
+  font-family: Inconsolata;
+  color: #5e5d5d;
+  margin-left: 20%;
+  margin-right: 20%;
+}
