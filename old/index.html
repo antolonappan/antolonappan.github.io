@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .gif-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+        }
+        .loading-text {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+        .buffering {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            border: 6px solid #ccc;
+            border-radius: 50%;
+            border-top-color: #333;
+            animation: spin 1s linear infinite;
+            margin-top: 20px;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="gif-container">
+        <img src="wh.gif" alt="Loading gif">
+    </div>
+    <div class="loading-text">Reaching the other universe in <span id="countdown">4</span> sec...</div>
+    <div class="buffering"></div>
+
+    <script>
+        let countdown = document.getElementById('countdown');
+        let seconds = 4;
+        let interval = setInterval(() => {
+            seconds--;
+            countdown.textContent = seconds;
+            if (seconds <= 0) {
+                clearInterval(interval);
+                window.location.href = "https://antolonappan.me";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

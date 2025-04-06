@@ -1,0 +1,121 @@
+/* Additional UI adjustments for horizontal scrolling and carousel */
+
+/* Ensure consistent styling for horizontal scrolling sections */
+.research-interests, .projects-grid {
+  padding: 15px 0;
+  margin: 20px 0;
+  background-color: rgba(10, 10, 10, 0.3);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Style adjustments for research items in horizontal scroll */
+.research-item {
+  background-color: rgba(20, 20, 20, 0.7);
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  padding: 20px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.research-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.research-item h3 {
+  color: var(--accent-color);
+  margin-bottom: 15px;
+  font-family: 'Special Elite', 'Courier New', monospace;
+}
+
+/* Style adjustments for project cards in horizontal scroll */
+.project-card {
+  background-color: rgba(20, 20, 20, 0.7);
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  padding: 20px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-title {
+  color: var(--accent-color);
+  margin-bottom: 15px;
+  font-family: 'Special Elite', 'Courier New', monospace;
+}
+
+.project-description {
+  flex-grow: 1;
+}
+
+.project-link {
+  align-self: flex-start;
+  margin-top: auto;
+  color: var(--accent-color);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-color);
+  padding-bottom: 2px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.project-link:hover {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+/* Scroll button enhancements */
+.scroll-button {
+  opacity: 0.7;
+  transition: opacity 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+}
+
+.scroll-button:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Ensure consistent section spacing */
+section {
+  padding: 80px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .research-item, .project-card {
+    height: 220px;
+    padding: 15px;
+  }
+  
+  section {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .research-item, .project-card {
+    height: 200px;
+    padding: 10px;
+  }
+  
+  section {
+    padding: 40px 0;
+  }
+}

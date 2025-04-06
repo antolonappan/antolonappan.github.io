@@ -1,0 +1,194 @@
+/* Horizontal Scrolling Styles */
+.horizontal-scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) var(--tertiary-color);
+  padding: 20px 0;
+  position: relative;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar-track {
+  background: var(--tertiary-color);
+  border-radius: 10px;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 10px;
+}
+
+.scroll-item {
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+  margin-right: 20px;
+  min-width: 300px;
+  max-width: 350px;
+  transition: transform 0.3s ease;
+}
+
+.scroll-item:hover {
+  transform: translateY(-5px);
+}
+
+.scroll-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.scroll-button {
+  background-color: var(--tertiary-color);
+  color: var(--accent-color);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Publication Carousel Styles */
+.publication-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  position: relative;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.carousel-button {
+  background-color: var(--tertiary-color);
+  color: var(--accent-color);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+  background-color: var(--secondary-color);
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.carousel-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--tertiary-color);
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-indicator.active {
+  background-color: var(--accent-color);
+}
+
+.carousel-pause {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--tertiary-color);
+  color: var(--accent-color);
+  border: none;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-pause:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .scroll-item {
+    min-width: 250px;
+    max-width: 300px;
+  }
+  
+  .carousel-item {
+    padding: 15px;
+  }
+  
+  .scroll-button, .carousel-button, .carousel-pause {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-item {
+    min-width: 200px;
+    max-width: 250px;
+  }
+  
+  .carousel-item {
+    padding: 10px;
+  }
+  
+  .scroll-button, .carousel-button, .carousel-pause {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+}

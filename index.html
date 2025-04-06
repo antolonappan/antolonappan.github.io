@@ -3,62 +3,324 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loading</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-            color: #333;
-        }
-        .gif-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 50vh;
-        }
-        .loading-text {
-            font-size: 1.5em;
-            margin-top: 20px;
-        }
-        .buffering {
-            display: inline-block;
-            width: 80px;
-            height: 80px;
-            border: 6px solid #ccc;
-            border-radius: 50%;
-            border-top-color: #333;
-            animation: spin 1s linear infinite;
-            margin-top: 20px;
-        }
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-    </style>
+    <title>Anto Idicherian Lonappan | Astrophysics & Cosmology</title>
+    <meta name="description" content="Academic profile of Dr. Anto Idicherian Lonappan, Postdoctoral Fellow at University of California, San Diego, specializing in Cosmic Microwave Background research.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/effects.css">
+    <link rel="stylesheet" href="css/horizontal-scroll.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/ui-adjustments.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
-    <div class="gif-container">
-        <img src="wh.gif" alt="Loading gif">
-    </div>
-    <div class="loading-text">Reaching the other universe in <span id="countdown">4</span> sec...</div>
-    <div class="buffering"></div>
+    <!-- Vintage Filter Overlay -->
+    <div class="vintage-filter"></div>
+    <div class="bg-pattern"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">A.I.L</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#code">Code</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div id="particles-js" class="particles-js"></div>
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <img src="images/anto.jpg" alt="Anto Idicherian Lonappan" class="hero-image">
+            <h1 class="hero-title typewriter">Anto Idicherian Lonappan</h1>
+            <h2 class="hero-subtitle">Postdoctoral Fellow in Astrophysics & Cosmology</h2>
+            <p class="hero-description">University of California, San Diego</p>
+            <div class="decorative-line"></div>
+            <p class="hero-description">Exploring the Cosmic Microwave Background to unravel the secrets of our universe</p>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="fade-in">About Me</h2>
+            <div class="decorative-line fade-in"></div>
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <p>I am a cosmologist with expertise in observational data analysis, particularly focused on the Cosmic Microwave Background and early-universe physics. My academic foundation was built through a Bachelor's and Master's degree in Physics from St. Berchman's College, Changanassery, where I developed a strong interest in cosmology, culminating in a thesis on Bayesian inference of cosmological data.</p>
 
-    <script>
-        let countdown = document.getElementById('countdown');
-        let seconds = 4;
-        let interval = setInterval(() => {
-            seconds--;
-            countdown.textContent = seconds;
-            if (seconds <= 0) {
-                clearInterval(interval);
-                window.location.href = "https://antolonappan.me";
-            }
-        }, 1000);
-    </script>
+                    <p>Following this, I joined the Centre for Theoretical Physics at Jamia Millia Islamia, New Delhi, as a project student under Prof. Anjan Ananda Sen. This collaboration led to my first publication, which investigated dark energy through a comprehensive analysis of observational data.</p>
+                    
+                    <p>I then worked as a Junior Research Fellow at Presidency University, Kolkata, where I studied the co-evolution of supermassive black holes and their host galaxies.</p>
+                    
+                    <p>In 2018, I began my PhD in Astrophysics and Cosmology at SISSA (International School for Advanced Studies), Trieste, Italy. During this time, I contributed to several major CMB experiments—POLARBEAR, Simons Array, Simons Observatory, and LiteBIRD—focused on detecting primordial gravitational waves and refining our understanding of the inflationary epoch.</p>
+                    
+                    <p>Following my doctoral studies, I held a postdoctoral position at the University of Rome Tor Vergata, collaborating with Dr. Giuseppe Puglisi and Prof. Nicola Vittorio on CMB data analysis and forecasting.</p>
+                    
+                    <p>Currently, I am a postdoctoral researcher at the University of California, San Diego, working with Prof. Brian Keating on precision measurements of the CMB to probe the fundamental physics of the early universe.</p>
+                </div>
+                <div class="about-image fade-in">
+                    <img src="images/work.png" alt="Anto Idicherian Lonappan at work">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Research Section -->
+    <section id="research" class="research">
+        <div class="container">
+            <h2 class="fade-in">Research</h2>
+            <div class="decorative-line fade-in"></div>
+            <p class="fade-in">My research focuses on the Cosmic Microwave Background (CMB), combining theoretical insights with data analysis. I explore various aspects of cosmology to better understand the fundamental nature of our universe.</p>
+            
+            <h3 class="fade-in">Research Interests</h3>
+            <div id="research-interests" class="research-interests">
+                <div class="research-item fade-in">
+                    <h3>Gravitational Lensing of CMB</h3>
+                    <p>Studying how gravitational lensing affects the cosmic microwave background radiation, providing insights into the distribution of matter in the universe.</p>
+                </div>
+                <div class="research-item fade-in">
+                    <h3>Cosmic Birefringence</h3>
+                    <p>Investigating the rotation of the polarization plane of CMB photons, which could indicate new physics beyond the standard model.</p>
+                </div>
+                <div class="research-item fade-in">
+                    <h3>CMB Data Analysis</h3>
+                    <p>Developing and applying sophisticated statistical methods to extract cosmological information from CMB observations.</p>
+                </div>
+                <div class="research-item fade-in">
+                    <h3>Observational Cosmology</h3>
+                    <p>Using observational data to constrain cosmological models and parameters, testing theories about the universe's evolution.</p>
+                </div>
+                <div class="research-item fade-in">
+                    <h3>Dark Energy Phenomenology</h3>
+                    <p>Exploring the nature of dark energy through various theoretical models and observational constraints.</p>
+                </div>
+                <div class="research-item fade-in">
+                    <h3>Data Science</h3>
+                    <p>Applying data science techniques to astronomical datasets to uncover patterns and insights that traditional methods might miss.</p>
+                </div>
+            </div>
+            
+            <div class="collaborations fade-in">
+                <h3>Collaborations</h3>
+                <p>I am an active member of several major collaborations in cosmology:</p>
+                <ul>
+                    <li>POLARBEAR</li>
+                    <li>Simons Array</li>
+                    <li>Simons Observatory</li>
+                    <li>LiteBIRD</li>
+                    <li>CMB-S4</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Publications Section -->
+    <section id="publications" class="publications">
+        <div class="container">
+            <h2 class="fade-in">Publications</h2>
+            <div class="decorative-line fade-in"></div>
+            <p class="fade-in">My research has been published in peer-reviewed journals and presented at international conferences. Below is a selection of my recent publications.</p>
+            
+            <div class="publication-list">
+                <div class="publication-item fade-in">
+                    <h3 class="publication-title">LiteBIRD science goals and forecasts: a full-sky measurement of gravitational lensing of the CMB</h3>
+                    <p class="publication-meta">Journal of Cosmology and Astroparticle Physics (2024)</p>
+                    <p>This paper presents a comprehensive study on how the LiteBIRD mission will measure gravitational lensing across the entire sky, providing unprecedented insights into the distribution of matter in the universe.</p>
+                    <div class="publication-links">
+                        <a href="#" target="_blank">JCAP</a>
+                        <a href="#" target="_blank">arXiv</a>
+                    </div>
+                </div>
+                
+                <div class="publication-item fade-in">
+                    <h3 class="publication-title">LiteBIRD science goals and forecasts: improving sensitivity to inflationary gravitational waves with multitracer delensing</h3>
+                    <p class="publication-meta">Journal of Cosmology and Astroparticle Physics (2024)</p>
+                    <p>This study explores how multitracer delensing techniques can enhance LiteBIRD's sensitivity to the faint signals of gravitational waves from the inflationary epoch.</p>
+                    <div class="publication-links">
+                        <a href="#" target="_blank">JCAP</a>
+                        <a href="#" target="_blank">arXiv</a>
+                    </div>
+                </div>
+                
+                <div class="publication-item fade-in">
+                    <h3 class="publication-title">Improved upper limit on degree-scale CMB B-mode polarization power from the 670 square-degree POLARBEAR survey</h3>
+                    <p class="publication-meta">The Astrophysical Journal (2022)</p>
+                    <p>This paper presents improved constraints on the amplitude of primordial gravitational waves based on observations from the POLARBEAR experiment covering 670 square degrees of the sky.</p>
+                    <div class="publication-links">
+                        <a href="#" target="_blank">APJ</a>
+                        <a href="#" target="_blank">arXiv</a>
+                    </div>
+                </div>
+                
+                <div class="publication-item fade-in">
+                    <h3 class="publication-title">Cosmological Simulation of Galaxy Groups and Clusters-I: Global Effect of Feedback from Active Galactic Nuclei</h3>
+                    <p class="publication-meta">The Astrophysical Journal (2020)</p>
+                    <p>This research explores how feedback from active galactic nuclei affects the formation and evolution of galaxy groups and clusters through cosmological simulations.</p>
+                    <div class="publication-links">
+                        <a href="#" target="_blank">APJ</a>
+                        <a href="#" target="_blank">arXiv</a>
+                    </div>
+                </div>
+                
+                <div class="publication-item fade-in">
+                    <h3 class="publication-title">Bayesian Evidences for Dark Energy models in light of current obsevational data</h3>
+                    <p class="publication-meta">Physical Review D (2018)</p>
+                    <p>This paper applies Bayesian statistical methods to evaluate different dark energy models against observational data, providing a rigorous comparison of their explanatory power.</p>
+                    <div class="publication-links">
+                        <a href="#" target="_blank">PhysRevD</a>
+                        <a href="#" target="_blank">arXiv</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="citation-metrics fade-in">
+                <h3>Citation Metrics</h3>
+                <div class="metrics-grid">
+                    <div class="metric-item">
+                        <div class="metric-value">196</div>
+                        <div class="metric-label">Total Citations</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">183</div>
+                        <div class="metric-label">Citations Since 2020</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">8</div>
+                        <div class="metric-label">h-index</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">7</div>
+                        <div class="metric-label">i10-index</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Code/Projects Section -->
+    <section id="code" class="code">
+        <div class="container">
+            <h2 class="fade-in">Code & Projects</h2>
+            <div class="decorative-line fade-in"></div>
+            <p class="fade-in">I develop and contribute to various software projects related to cosmology and astrophysics. Here are some of my key repositories:</p>
+            
+            <div id="projects-grid" class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-content">
+                        <h3 class="project-title">POLARBEAR LargePatch</h3>
+                        <p class="project-description">Likelihood and parameter estimation tools for improved constraints on the tensor-to-scalar ratio (r) using POLARBEAR data.</p>
+                        <a href="https://github.com/antolonappan" class="project-link" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in">
+                    <div class="project-content">
+                        <h3 class="project-title">DELL</h3>
+                        <p class="project-description">Tools for reconstruction of Kappa maps, foreground cleaning, delensing, and combining data from CMB-S4 and LiteBIRD experiments.</p>
+                        <a href="https://github.com/antolonappan" class="project-link" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in">
+                    <div class="project-content">
+                        <h3 class="project-title">S4BIRD</h3>
+                        <p class="project-description">Pipeline for delensing LiteBIRD data, including quadratic estimators, template delensing routines, pure B-mode calculations, and likelihood analysis.</p>
+                        <a href="https://github.com/antolonappan" class="project-link" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="fade-in">Contact</h2>
+            <div class="decorative-line fade-in"></div>
+            <div class="contact-content">
+                <div class="contact-info fade-in">
+                    <p>Feel free to reach out to me for collaborations, questions about my research, or any other inquiries.</p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div>
+                            <h3>Academic Affiliation</h3>
+                            <p>Department of Physics<br>University of California, San Diego<br>9500 Gilman Drive<br>La Jolla, CA 92093</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>alonappan[at]ucsd.edu</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/antolonappan" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://scholar.google.co.in/citations?user=tz_hyHUAAAAJ&hl=en" class="social-link" target="_blank">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/antoilonappan" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">© <span id="current-year">2025</span> Anto Idicherian Lonappan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Decorative Corner Elements -->
+    <div class="corner-decoration top-left"></div>
+    <div class="corner-decoration top-right"></div>
+    <div class="corner-decoration bottom-left"></div>
+    <div class="corner-decoration bottom-right"></div>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top">↑</button>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/horizontal-scroll.js"></script>
+    <script src="js/carousel.js"></script>
 </body>
 </html>

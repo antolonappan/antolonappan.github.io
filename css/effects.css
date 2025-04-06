@@ -1,0 +1,323 @@
+/* Additional CSS for enhanced visual effects */
+
+/* Custom Cursor */
+.custom-cursor {
+  display: none;
+}
+
+@media (pointer: fine) {
+  .custom-cursor {
+    display: block;
+  }
+  
+  body {
+    cursor: none;
+  }
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background-color: var(--accent-color);
+  z-index: 1000;
+  width: 0%;
+  transition: width 0.1s ease;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--tertiary-color);
+  color: var(--accent-color);
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-to-top:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Floating Elements */
+.floating-element {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Page Transition */
+.page-transition {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Vintage Paper Effect */
+.paper-effect {
+  position: relative;
+}
+
+.paper-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/paper-texture.png');
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* Particle Canvas */
+#particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Enhanced Section Transitions */
+section {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+section.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+section:not(.active) {
+  transform: translateY(20px);
+  opacity: 0.8;
+}
+
+/* Decorative Corner Elements */
+.corner-decoration {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url('../images/corner-decoration.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.corner-decoration.top-left {
+  top: 20px;
+  left: 20px;
+}
+
+.corner-decoration.top-right {
+  top: 20px;
+  right: 20px;
+  transform: rotate(90deg);
+}
+
+.corner-decoration.bottom-left {
+  bottom: 20px;
+  left: 20px;
+  transform: rotate(270deg);
+}
+
+.corner-decoration.bottom-right {
+  bottom: 20px;
+  right: 20px;
+  transform: rotate(180deg);
+}
+
+/* Enhanced Typewriter Effect */
+.typewriter-container {
+  display: inline-block;
+  position: relative;
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background-color: var(--accent-color);
+  margin-left: 2px;
+  animation: blink 0.7s infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Antique Frame for Images */
+.antique-frame {
+  position: relative;
+  padding: 15px;
+  background-color: var(--tertiary-color);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.antique-frame::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 1px solid var(--accent-color);
+  pointer-events: none;
+}
+
+.antique-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Vintage Overlay */
+.vintage-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.3;
+}
+
+/* Animated Background Pattern */
+.bg-pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/bg-pattern.png');
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: -2;
+  animation: patternMove 60s linear infinite;
+}
+
+@keyframes patternMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
+}
+
+/* Enhanced Section Dividers */
+.section-divider {
+  position: relative;
+  height: 50px;
+  margin: 2rem 0;
+}
+
+.section-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--tertiary-color);
+}
+
+.section-divider::after {
+  content: '✦';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--bg-color);
+  padding: 0 20px;
+  color: var(--accent-color);
+  font-size: 1.5rem;
+}
+
+/* Ink Splatter Decorations */
+.ink-splatter {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-image: url('../images/ink-splatter.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .corner-decoration {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .section-divider {
+    height: 30px;
+  }
+  
+  .section-divider::after {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .vintage-filter,
+  .vintage-overlay,
+  .bg-pattern,
+  .particles-js,
+  #particle-canvas,
+  .floating-element,
+  .scroll-progress,
+  .back-to-top,
+  .custom-cursor,
+  .cursor-follower {
+    display: none !important;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: black;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+  }
+  
+  section {
+    padding: 1rem 0;
+    min-height: auto;
+  }
+}
